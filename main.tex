@@ -1,0 +1,259 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
+\usepackage{microtype}
+\hypersetup{hidelinks,
+  pdftitle={Free Fall, Proper Acceleration, and Tidal Curvature: An Operational Comparison},
+  pdfauthor={Ikbal Fadilah}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+
+\title{Free Fall, Proper Acceleration, and Tidal Curvature:\\
+An Operational Comparison}
+\author{Ikbal Fadilah\\
+\small Independent researcher, Causyne\\
+\small \href{mailto:ikbal@causyne.com}{ikbal@causyne.com}\\
+\small ORCID: \href{https://orcid.org/0009-0008-4853-135X}{0009-0008-4853-135X}}
+\date{Preprint, 24 October 2026}
+
+\maketitle
+
+\begin{abstract}
+An ideal accelerometer in free fall reads zero, while an observer supported at rest above Earth measures a nonzero proper acceleration. Neither reading alone determines whether spacetime is curved. We compare these observations in an accelerated frame in Minkowski spacetime and for static and freely falling observers in the Schwarzschild exterior. In the latter case, neighboring geodesics have a nonzero relative acceleration even though each ideal freely falling accelerometer reads zero. We derive the leading radial and transverse tidal terms, the static observer's proper acceleration, and the first-order clock-rate gradient, then estimate their magnitudes near Earth and in an illustrative low orbit. The comparison clarifies the interpretation of falling objects and orbital microgravity. All quantitative results follow from established general relativity; no alternative field dynamics or new experimental result is proposed.
+\end{abstract}
+
+\section{Introduction}
+
+A drop of water released near Earth, a hammer and a feather released on the Moon, and an astronaut in orbit seem to inhabit different environments. The first falls toward a surface, the second pair arrives together when atmospheric drag is negligible, and the astronaut floats. Their common feature is not the disappearance of Earth's or the Moon's influence: to a good approximation, freely moving small test bodies follow geodesics. A freely falling laboratory cannot determine its uniform translational ``downward acceleration'' from local mechanical measurements alone. This is the content of the equivalence principle in its local domain, not a denial of tidal effects \cite{Wald,EinsteinOnline,NASAOrbit}.
+
+The question here is operational: what is measured by an accelerometer carried by one observer, by two separated freely falling probes, and by a pair of clocks? The first measures proper acceleration, the second constrains tidal curvature, and the third compares elapsed proper time along specified worldlines. The measurements cannot be interchanged. We make the distinction explicit and estimate its scale near Earth.
+
+This is a comparison of established results, not an independent test or a new gravitational theory. The possible microscopic origin of spacetime is a separate question from the observations considered here.
+
+We use metric signature $(-,+,+,+)$. Unless otherwise stated, $G$ is Newton's constant, $c$ the speed of light, $M$ the mass of a spherical source, and $r$ its areal radius. The formulas below are idealizations: a real terrestrial laboratory rotates with Earth, Earth is neither perfectly spherical nor isolated, fluids experience pressure and drag, and an orbiting spacecraft experiences small nongravitational perturbations. Those qualifications matter when moving from an exact model to an experiment.
+
+\section{What an accelerometer measures}
+
+Let $u^\mu=dx^\mu/d\tau$ be the four-velocity of a timelike observer, normalized by $u^\mu u_\mu=-c^2$. Its four-acceleration is
+\begin{equation}
+ a^\mu=u^\nu\nabla_\nu u^\mu,\qquad
+ \alpha=\sqrt{a^\mu a_\mu}.
+ \label{eq:proper}
+\end{equation}
+The scalar $\alpha$ is proper acceleration. An ideal accelerometer carried by the observer reports it, independently of coordinates. For a freely falling, structureless test body subject only to gravitation, the geodesic equation gives $a^\mu=0$. The statement is local and conditional: drag, rocket thrust, electromagnetic forces, or pressure gradients can make $a^\mu$ nonzero. A particular water molecule or fluid element is not automatically a geodesic simply because the bulk water is falling.
+
+An observer resting on a floor is different. In a Newtonian force balance for a body of mass $m$ at rest relative to the ground, the floor exerts an upward normal force $N\simeq mg$ (away from other forces and rotational corrections). The body is prevented from following a free-fall trajectory; an accelerometer at rest on the floor reads approximately $g$. In general relativity, the same distinction is expressed without identifying a unique local gravitational force on a geodesic: the supported observer has nonzero proper acceleration, whereas the ideal freely falling observer has zero. The sensation of weight arises from support forces and internal stress, not from a magnetic field holding an ordinary neutral person to Earth's surface.
+
+The scale of a measurement matters. At one event on a geodesic, coordinates can be chosen so that the connection coefficients vanish there. Over a finite laboratory, curvature produces relative effects. Conversely, an accelerated coordinate system in flat spacetime can make freely moving objects appear to fall toward its floor. Neither fact licenses the statement that every body in the Universe is perpetually ``falling'' in a frame-independent sense: free fall is a condition on a worldline, while coordinate acceleration depends on the chosen frame.
+
+\section{Acceleration without curvature: a controlled comparison}
+
+An accelerated laboratory in Minkowski spacetime supplies a useful counterexample to the claim that the sensation of weight by itself proves spacetime curvature. In Rindler coordinates over a restricted wedge of flat spacetime, the line element can be written \cite{Rindler}
+\begin{equation}
+ ds^2=-\left(1+\frac{gz}{c^2}\right)^2c^2dt^2+dx^2+dy^2+dz^2,
+ \qquad 1+gz/c^2>0 .
+ \label{eq:rindler}
+\end{equation}
+An observer fixed at $z=0$ has proper acceleration $g$; at a general fixed $z$, its magnitude is
+\begin{equation}
+ \alpha_{\rm R}(z)=\frac{g}{1+gz/c^2}.
+ \label{eq:rindler-a}
+\end{equation}
+Equation (\ref{eq:rindler}) is a coordinate description of \emph{flat} spacetime: its Riemann tensor vanishes identically. A released test body appears to fall toward decreasing $z$ in these coordinates, while its own ideal accelerometer reads zero. Thus ``falling toward the floor'' and ``feeling weight while standing'' can occur without curvature. The example establishes a logical limit of the motivating analogy, not an alternative model of Earth.
+
+Clocks held at two Rindler heights also tick at different rates relative to the same coordinate time:
+\begin{equation}
+ \frac{d\tau(z)}{dt}=1+\frac{gz}{c^2}.
+ \label{eq:rindler-clock}
+\end{equation}
+Consequently, a local height-dependent clock comparison, considered alone, does not uniquely distinguish a supported laboratory in a gravitational field from a suitably accelerated laboratory in flat spacetime. What distinguishes the two globally or over a sufficiently extended region is the tidal or curvature structure. This qualification is important when interpreting gravitational redshift experiments.
+
+\section{A supported observer outside a spherical mass}
+
+The Schwarzschild exterior provides a second, physically different laboratory. With $f(r)=1-2GM/(c^2r)$, its line element is
+\begin{equation}
+ ds^2=-f(r)c^2dt^2+f(r)^{-1}dr^2+r^2d\Omega^2 .
+ \label{eq:schwarzschild}
+\end{equation}
+This is an exact vacuum solution for a nonrotating, spherical source outside its matter distribution. For a static observer, $dr=d\theta=d\phi=0$ and $u^t=dt/d\tau=f^{-1/2}$. The relevant connection coefficient is
+\begin{equation}
+ \Gamma^{r}{}_{tt}=\frac{1}{2}f c^2 f'=f\frac{GM}{r^2} .
+ \label{eq:christoffel}
+\end{equation}
+Inserting this into Eq.~(\ref{eq:proper}) gives $a^r=\Gamma^r{}_{tt}(u^t)^2=GM/r^2$. Since $g_{rr}=f^{-1}$, the accelerometer magnitude is
+\begin{equation}
+ \alpha_{\rm stat}(r)=\frac{GM}{r^2\sqrt{1-2GM/(c^2r)}}.
+ \label{eq:static-a}
+\end{equation}
+For Earth the relativistic correction to $GM/r^2$ is tiny. A person stationary with respect to the idealized source is therefore accelerated by the support beneath their feet. A freely falling person at the same event has $\alpha=0$ until contact or another nongravitational interaction changes the motion. Equation (\ref{eq:static-a}) does not say Earth is accelerating outward through space; it describes the worldline required to remain at fixed $r$ in the Schwarzschild geometry.
+
+Static clocks at radii $r_1$ and $r_2$ satisfy $d\tau_i=\sqrt{f(r_i)}dt$. For a small positive height difference $h=r_2-r_1$ in the weak-field limit,
+\begin{equation}
+ \frac{d\tau_2/dt-d\tau_1/dt}{d\tau_1/dt}
+ \simeq \frac{gh}{c^2},\qquad g\simeq\frac{GM}{r_1^2}.
+ \label{eq:redshift}
+\end{equation}
+This is consistent with measured gravitational redshift across laboratory scales \cite{Bothwell,Zheng}. The redshift is evidence for relativistic gravitational physics in the full setting of the experiments, but the first-order form $gh/c^2$ is also reproduced by the local accelerated-frame construction of Eq.~(\ref{eq:rindler-clock}). Redshift alone is therefore not the curvature diagnostic used below.
+
+\section{The residual that a falling frame cannot erase}
+
+Two nearby freely falling test bodies form a different instrument from a single accelerometer. Let $\bm{\xi}$ be their spatial separation in a locally freely falling frame. In the slow-motion, weak-field limit outside a spherical mass, the Newtonian potential is $\Phi=-GM/r$ and their leading relative acceleration is
+\begin{equation}
+ \ddot\xi^i=-\partial_i\partial_j\Phi\,\xi^j.
+ \label{eq:tidalnewton}
+\end{equation}
+At a point on the radial axis, the Hessian has eigenvalues $(-2,+1,+1)GM/r^3$. Hence an initially radial separation $h$ grows, while an initially transverse separation $L$ shrinks:
+\begin{equation}
+ \Delta a_{r}\simeq +\frac{2GM}{r^3}h,
+ \qquad
+ \Delta a_{\perp}\simeq-\frac{GM}{r^3}L.
+ \label{eq:tidalcomponents}
+\end{equation}
+The trace vanishes outside the source in this approximation, as expected from $\nabla^2\Phi=0$ in vacuum. The signs describe stretching along the radius and compression perpendicular to it, not a force felt by an individual pointlike falling instrument.
+
+General relativity expresses the same operational fact through geodesic deviation. In a freely falling orthonormal frame, define the electric tidal tensor $\mathcal E_{ij}$ by
+\begin{equation}
+ \frac{d^2\xi^i}{d\tau^2}=-\mathcal E^{i}{}_{j}\xi^j+O(|\bm\xi|^2),
+ \qquad \mathcal E_{ij}=c^2 R_{\hat 0 i\hat 0 j}
+ \label{eq:deviation}
+\end{equation}
+with the curvature-sign convention fixed by this equation. In the weak-field limit $\mathcal E_{ij}\simeq\partial_i\partial_j\Phi$. A coordinate transformation can eliminate the connection along one freely falling worldline, but cannot make a nonzero Riemann tensor vanish throughout a neighborhood. Fermi normal coordinates make this distinction explicit \cite{Nesterov}. The use of the linearized separation equation presumes that the bodies are sufficiently close and that nongravitational differential forces are controlled.
+
+For the Schwarzschild exterior a scalar curvature invariant is
+\begin{equation}
+ \mathcal K=R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma}
+ =\frac{48G^2M^2}{c^4r^6}.
+ \label{eq:kretschmann}
+\end{equation}
+It is nonzero outside a gravitating mass, whereas it is zero in the Rindler description of Minkowski spacetime. Equation (\ref{eq:kretschmann}) is a theoretical discriminator. An actual instrument does not read $\mathcal K$ directly; a suitably arranged set of local relative-motion measurements can constrain components of curvature. The distinction between a scalar invariant and an experimental observable must be maintained.
+
+\section{Near-Earth scales and three familiar demonstrations}
+
+For a transparent order-of-magnitude comparison, take $GM=3.98600435507\times10^{14}\,\mathrm{m^3\,s^{-2}}$ from the JPL DE440 planetary ephemeris and the volumetric mean Earth radius $R=6.371\times10^6\,\mathrm m$ reported by NASA \cite{JPLGM,NASAEarth}. These are inputs to an ideal spherical model; we do not infer new geophysical parameters from them. The point-mass estimate gives $GM/R^2\simeq9.82\,\mathrm{m\,s^{-2}}$. For two freely falling probes separated radially by $h=1\,\mathrm m$, Eq.~(\ref{eq:tidalcomponents}) predicts
+\begin{equation}
+ \Delta a_r\simeq3.08\times10^{-6}\,\mathrm{m\,s^{-2}},
+ \qquad \frac{\Delta a_r}{g}\simeq3.14\times10^{-7}.
+ \label{eq:earthtidal}
+\end{equation}
+The corresponding leading clock-rate difference for two supported clocks one meter apart is $gh/c^2\simeq1.09\times10^{-16}$. These are different observables: Eq.~(\ref{eq:earthtidal}) is a tidal relative acceleration; Eq.~(\ref{eq:redshift}) is a rate comparison requiring a specified clock configuration. Real measurements must include Earth's rotation, shape, local mass distribution, instrumental drift, and other systematic effects.
+
+At an illustrative circular-orbit altitude of $h_{\rm orb}=400\,\mathrm{km}$, the same Newtonian approximation yields
+\begin{equation}
+ g_{\rm orb}=\frac{GM}{(R+h_{\rm orb})^2}\simeq8.69\,\mathrm{m\,s^{-2}},
+ \qquad v_{\rm orb}=\sqrt{\frac{GM}{R+h_{\rm orb}}}\simeq7.67\,\mathrm{km\,s^{-1}}.
+ \label{eq:orbit}
+\end{equation}
+Thus a crew member can float while Earth's field remains roughly $0.88$ of the surface point-mass value. The station and its occupants are approximately co-falling; residual accelerations, including drag, vibrations and gravity gradients, prevent perfect weightlessness \cite{NASAOrbit}. The circular-orbit approximation should not be mistaken for a claim about the station's exact altitude or instantaneous orbit.
+
+\begin{table}[t]
+\caption{What the motivating examples establish. ``Zero'' refers to ideal proper acceleration of a freely falling test body, not to vanishing curvature.}
+\label{tab:examples}
+\centering
+\renewcommand{\arraystretch}{1.16}
+\begin{tabular}{L{0.17\linewidth}L{0.34\linewidth}L{0.34\linewidth}}
+\toprule
+Situation & Leading observation & Inference and limit \\
+\midrule
+Falling water & Bulk motion approaches free fall when drag and internal stresses are small. & A comoving ideal accelerometer can read zero; the behavior does not remove tidal curvature. \\
+Supported person & Floor contact generates stress and a nonzero accelerometer reading. & Support, not Earth's magnetic field, supplies the local felt force. \\
+Apollo 15 drop & Hammer and feather arrived together within the resolution of the demonstration. & Near-vacuum free fall is composition independent at that precision; this is not a precision test of curvature. \\
+Orbital crew & Crew and spacecraft approximately co-fall. & Microgravity is not the absence of Earth's gravitational influence. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The Apollo 15 hammer-and-feather demonstration is particularly informative because it removes the large atmospheric drag difference that masks free-fall universality on Earth. NASA reports an approximately $1.32\,\mathrm{kg}$ hammer and $0.03\,\mathrm{kg}$ feather dropped from about $1.6\,\mathrm m$ and landing together within the accuracy of the release \cite{NASAApollo}. It is a vivid demonstration, not a measurement at the sensitivity of the MICROSCOPE satellite's composition-dependent free-fall test. The latter found no violation for titanium and platinum test masses, with an E\"otv\"os parameter $[-1.5\pm2.3\,(\mathrm{stat})\pm1.5\,(\mathrm{syst})]\times10^{-15}$ at the stated one-standard-deviation level \cite{Microscope}. Neither result implies that the Earth or Moon exerts no gravitational effect.
+
+\section{Scope of the free-fall interpretation}
+
+For an ideal test body, free fall means geodesic motion and vanishing proper acceleration. This does not specify the geometry that determines the geodesics. A dynamical theory must also account for tidal effects, clock comparisons, the propagation of light, and gravitational waves.
+
+General relativity provides a metric, field equations, and equations of motion from which the examples above follow. The measured gravitational-wave signal from a binary black-hole merger is one of the constraints on relativistic spacetime dynamics \cite{LIGO}. Orbital motion is free fall to a good approximation, whereas an observer fixed to a floor is supported and has nonzero proper acceleration. Cosmological expansion describes relations between suitable large-scale observers and should not be substituted for a local acceleration toward Earth's surface.
+
+Whether the metric has a more fundamental microscopic origin is outside the scope of these observations. The free-fall examples do not discriminate between general relativity and any candidate model that reproduces its predictions in the same regime.
+
+A distinct model would need defined degrees of freedom and dynamics, a derivation of its effective metric and matter coupling, agreement with established tests where general relativity succeeds, and a quantitative prediction that separates it from general relativity. None follows from the free-fall observation alone. The analysis here stays within general relativity.
+
+\section{An operational test hierarchy}
+
+The preceding derivations suggest a hierarchy of questions. A local accelerometer asks whether its \emph{own} trajectory is forced away from a geodesic. A pair of nearby freely falling probes asks whether neighboring geodesics converge or diverge. A distributed clock network compares proper times on specified paths. A gravitational-wave detector measures differential strain produced by time-dependent curvature. These devices answer related but nonidentical questions. None can be replaced by visual inspection of a single falling object.
+
+One hypothetical comparison puts an accelerometer at the center of a small freely falling capsule and several freely floating proof masses at known initial separations. Ideally, the accelerometer approaches zero while the relative separations exhibit the small tidal pattern of Eq.~(\ref{eq:tidalcomponents}). The experiment would require correction for proof-mass charge, residual gas, capsule rotation, vibrations, and release impulses. It would confirm the expected coexistence of local weightlessness and curvature; it would not discriminate general relativity from every alternative that reproduces the same tidal tensor. A genuinely new theory must make a distinct prediction under the same controlled conditions.
+
+This hierarchy also clarifies the limits of a clock-only argument. A first-order redshift over a sufficiently small region follows both from a static gravitational model and from a flat accelerated frame. In contrast, a sufficiently detailed tidal map can reveal nonzero curvature. The scope and precision of a test determine which interpretations it can separate. Such careful bookkeeping is especially necessary when an everyday analogy is promoted to a cosmological claim.
+
+\section{Conclusion}
+
+Free fall and felt weight refer to different worldlines and different measurements. The Rindler comparison shows that a supported observer's accelerometer and a local clock gradient need not imply curvature. The Schwarzschild comparison supplies an additional observable: neighboring freely falling bodies have calculable relative acceleration. That tidal effect persists when coordinates are chosen to eliminate the connection along one worldline. The examples are consistent with general relativity but do not determine whether spacetime has a more fundamental microscopic description.
+
+\appendix
+\section{Derivation of the Rindler acceleration}
+
+Equation (\ref{eq:rindler}) can be obtained from Minkowski coordinates $(T,Z)$ by
+\begin{align}
+ cT&=\left(z+\frac{c^2}{g}\right)\sinh\left(\frac{gt}{c}\right),\\
+ Z&=\left(z+\frac{c^2}{g}\right)\cosh\left(\frac{gt}{c}\right)-\frac{c^2}{g}.
+\end{align}
+Substituting into $ds^2=-c^2dT^2+dZ^2+dx^2+dy^2$ yields Eq.~(\ref{eq:rindler}). A fixed-$z$ worldline is a hyperbola with invariant acceleration $c^2/(z+c^2/g)$, giving Eq.~(\ref{eq:rindler-a}). Because the transformation is a coordinate change on Minkowski spacetime, no curvature is generated. The construction is valid only in its Rindler wedge and is not a global representation of a spherical gravitational field.
+
+\section{Derivation and limits of the tidal estimate}
+
+For $\Phi=-GM/r$, differentiation gives
+\begin{equation}
+ \partial_i\partial_j\Phi
+ =\frac{GM}{r^3}\left(\delta_{ij}-3n_i n_j\right),
+ \qquad n_i=x_i/r.
+\end{equation}
+Insertion into Eq.~(\ref{eq:tidalnewton}) yields one positive radial relative-acceleration eigenvalue $2GM/r^3$ and two negative transverse eigenvalues $-GM/r^3$. Higher-order spatial terms scale as $O(|\bm\xi|^2/r^4)$ times $GM$ and are omitted. Near Earth, the small parameter for a one-meter apparatus is $|\bm\xi|/R\sim1.6\times10^{-7}$. In a real drop experiment, finite size, initial relative velocity, air forces, and rotations generally exceed the ideal signal unless they are measured or suppressed. The tidal tensor describes a differential response, not an acceleration assigned to an isolated event.
+
+\section{Clock gradients and their domain of equivalence}
+
+The first-order agreement between Eqs.~(\ref{eq:rindler-clock}) and (\ref{eq:redshift}) can be made more precise without identifying their global geometries. For two static Schwarzschild clocks separated by a small coordinate increment $h$, expand $f(r+h)$ about $r$:
+\begin{equation}
+ \frac{d\tau(r+h)}{d\tau(r)}
+ =\sqrt{\frac{f(r+h)}{f(r)}}
+ =1+\frac{GMh}{c^2r^2f(r)}+O(h^2).
+\end{equation}
+The local proper radial distance is $\ell=h/\sqrt{f(r)}+O(h^2)$; using Eq.~(\ref{eq:static-a}) gives
+\begin{equation}
+ \frac{d\tau(r+h)}{d\tau(r)}
+ =1+\frac{\alpha_{\rm stat}(r)\ell}{c^2}+O(\ell^2).
+\end{equation}
+This is the same local linear relation as the Rindler clock gradient for a laboratory with matching proper acceleration. The agreement is what the local equivalence principle leads one to expect. It does not mean that a finite Schwarzschild region can be transformed into Minkowski spacetime: the curvature invariant in Eq.~(\ref{eq:kretschmann}) remains nonzero. At higher order, spatial variations of acceleration and curvature enter clock comparisons, while the actual comparison protocol also involves signal propagation and relative motion. An interpretation must specify these details before labeling a clock measurement a direct curvature measurement.
+
+The approximate Earth value $gh/c^2$ quoted above uses a one-meter separation and the point-mass $g$ of the chosen model. It does not imply that a simple pair of clocks resolves the effect without calibration or environmental control. Laboratory demonstrations involve careful frequency comparison and systematic-error analysis \cite{Bothwell,Zheng}. Their observation supports the relativistic account, but a local clock gradient alone does not reveal a microscopic origin of gravity.
+
+\section{A differential measurement as a model comparison}
+
+The operational difference between flat acceleration and Earth-like curvature can be expressed as a small, testable displacement. Suppose two ideal pointlike proof masses begin at rest with respect to one another in a freely falling local frame and have radial separation $h=1\,\mathrm m$. If the tidal acceleration is approximately constant over a short interval $T$, Eq.~(\ref{eq:tidalcomponents}) gives
+\begin{equation}
+ \delta h(T)\simeq\frac{1}{2}\Delta a_rT^2
+ =\frac{GMh}{r^3}T^2.
+\end{equation}
+At the mean Earth radius, the idealized value for $T=1\,\mathrm s$ is about $1.54\,\mu\mathrm m$. For a circular-orbit radius $R+400\,\mathrm{km}$ the same simple central-field model gives about $1.28\,\mu\mathrm m$. These numbers are not proposed detection limits: they are expected displacements before release offsets, initial relative velocity, rotational terms, environmental perturbations, and instrument noise are considered. The $T^2$ law is only the short-time leading term; the full relative-motion problem requires integration along the reference orbit.
+
+In a genuinely flat laboratory with Rindler coordinates, a corresponding pair of initially comoving inertial proof masses has zero invariant geodesic-deviation tensor. Their positions may still acquire coordinate accelerations relative to the Rindler floor. Reporting only a coordinate trajectory would therefore recreate the original ambiguity; the differential measurement must be reconstructed in a local orthonormal frame. An Earth experiment additionally needs transverse baselines. A spherical monopole predicts radial stretching and transverse compression in the ratio $+2:-1:-1$ at leading order. Earth's quadrupole, rotation, nearby masses, and finite apparatus geometry perturb this ideal pattern; they do not turn its nonzero curvature into a coordinate artifact. Conversely, observation of the pattern alone would support the existing model without establishing a microscopic origin for gravity.
+
+\clearpage
+\begingroup\small
+\begin{thebibliography}{99}
+\bibitem{Wald} R. M. Wald, \emph{General Relativity} (University of Chicago Press, Chicago, 1984), Chaps. 3 and 6.
+\bibitem{Rindler} W. Rindler, ``Hyperbolic Motion in Curved Space Time,'' \emph{Phys. Rev.} \textbf{119}, 2082--2089 (1960), doi:10.1103/PhysRev.119.2082.
+\bibitem{EinsteinOnline} M. P\"ossel, ``The elevator, the rocket, and gravity: the equivalence principle,'' \emph{Einstein Online}, Max Planck Institute for Gravitational Physics, \url{https://www.einstein-online.info/en/spotlight/equivalence_principle/}.
+\bibitem{NASAOrbit} NASA, ``Chapter 3: Gravity and Mechanics,'' \emph{Basics of Space Flight}, \url{https://science.nasa.gov/learn/basics-of-space-flight/chapter3-4/}.
+\bibitem{Nesterov} A. I. Nesterov, ``Riemann normal coordinates, Fermi reference system and the geodesic deviation equation,'' \emph{Class. Quantum Grav.} \textbf{16}, 465--477 (1999), doi:10.1088/0264-9381/16/2/011.
+\bibitem{Bothwell} T. Bothwell \emph{et al.}, ``Resolving the gravitational redshift across a millimetre-scale atomic sample,'' \emph{Nature} \textbf{602}, 420--424 (2022), doi:10.1038/s41586-021-04349-7.
+\bibitem{Zheng} X. Zheng \emph{et al.}, ``A lab-based test of the gravitational redshift with a miniature clock network,'' \emph{Nature Communications} \textbf{14}, 4886 (2023), doi:10.1038/s41467-023-40629-8.
+\bibitem{NASAApollo} NASA, ``The Apollo 15 Hammer-Feather Drop,'' \url{https://science.nasa.gov/resource/the-apollo-15-hammer-feather-drop/}.
+\bibitem{Microscope} P. Touboul \emph{et al.}, ``MICROSCOPE Mission: Final Results of the Test of the Equivalence Principle,'' \emph{Phys. Rev. Lett.} \textbf{129}, 121102 (2022), doi:10.1103/PhysRevLett.129.121102.
+\bibitem{LIGO} B. P. Abbott \emph{et al.}, ``Observation of gravitational waves from a binary black hole merger,'' \emph{Phys. Rev. Lett.} \textbf{116}, 061102 (2016), doi:10.1103/PhysRevLett.116.061102.
+\bibitem{JPLGM} Jet Propulsion Laboratory, ``Astrodynamic Parameters,'' Earth $GM$ from DE440, \url{https://ssd.jpl.nasa.gov/astro_par.html}.
+\bibitem{NASAEarth} NASA, ``Earth Fact Sheet,'' volumetric mean radius, \url{https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html}.
+\end{thebibliography}
+\endgroup
+
+\end{document}
